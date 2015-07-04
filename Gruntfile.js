@@ -24,34 +24,55 @@ module.exports = function(grunt){
 		sass: {
 		    dist: {
 		        options: {
-		            style: 'compressed'
+		            style: 'expanded'
 		        },
 		        files: {
-		        	'dist/sass/all.scss' : 'stylesheets/sass/**/*.scss'
+		        	'stylesheets/css/all.css' : 'stylesheets/sass/**/*.scss',
+		        	'dist/css/all.css' : 'stylesheets/sass/**/*.scss'
 		        }
 		    } 
 		},
 	
 		csslint: {
-			all:['stylesheets/css/**/*.css']
+			all:['stylesheets/css/all.css','dist/css/all.css']
 		},
 
 		cssmin: {
 			dist: {
 				files: {
-					'stylesheets/css/all.min.css' : ['stylesheets/css/**/*.css']
+					'stylesheets/css/all.min.css' : ['stylesheets/css/all.css'],
+					'dist/css/all.min.css' : ['dist/css/all.css']
 				}
 			}
 		},
 
 		autoprefixer: {
 			all: {
-				src: 'dist/sass/all.min.scss'
+				src: 'dist/sass/all.min.css'
 			}
 		},
 
+		open : {
+			dev : {
+				path: 'http://127.0.0.1:8000/',
+				app: 'Google Chrome'
+			},
+			// build : {
+			// 	path : 'http://google.com/',
+			// 	app: 'Google Chrome'
+			// },
+			// file : {
+			// 	path : '/etc/hosts'
+			// },
+			// custom: {
+			// 	path : function () {
+			// 		return grunt.option('path');
+			// 	} 
+			// }
+		},
+
 		watch: {
-			sass: {
+			css: {
 				files: 'stylesheets/scss/**/*.scss',
 				tasks: ['sass'],
 				options: {
@@ -73,10 +94,12 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-open');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	
 	grunt.registerTask('default',[
 		'jshint',
 		'concat',
@@ -85,6 +108,7 @@ module.exports = function(grunt){
 		'csslint',
 		'cssmin',
 		'autoprefixer',
+		'open',
 		'watch'
 	]);
 
