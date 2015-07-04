@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Aditya Kappagantula -- Author -- http://aditya.kappagantula.com
+
+# THANKS
+
+    HTML5Boilerplate
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, SASS, HTML5, GRUNT, NodeJS
