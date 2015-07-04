@@ -15,7 +15,9 @@ After the above todo are complete, the repository is all set to perform the belo
 	2. Concatenate all JS files into a single file
 	3. Uglifying [a.k.a minifying] JS
 	4. Concatenate all SASS files into a single one
-	5. CSS Lint on pure CSS files
-	6. CSS Minify on pure CSS files
-	7. Autoprefix on the main scss file
-	8. Watch for changes on SASS and JS files and re-perform above tasks accordingly
+	5. Push minified CSS file to distribution folder and concatenated css files to development folder
+	6. CSS Lint on pure CSS files
+	7. CSS Minify on pure CSS files
+	8. Autoprefix on the main css file
+	9. Watch for changes on SASS and JS files and re-perform above tasks accordingly
+	10. Launch a server on port 8000 and launch the application on google chrome
