@@ -9,15 +9,15 @@ module.exports = function(grunt){
 		concat: {
 			dist: {
 				files: {
-					'js/all.js' : ['js/**/*.js']
+					'dist/js/all.js' : ['js/**/*.js']
 				}
 			}
 		},
 
 		uglify: {
 		    build: {
-		        src: 'js/all.js',
-		        dest: 'js/all.min.js'
+		        src: 'dist/js/all.js',
+		        dest: 'dist/js/all.min.js'
 		    }
 		},
 
@@ -27,7 +27,7 @@ module.exports = function(grunt){
 		            style: 'compressed'
 		        },
 		        files: {
-		        	'stylesheets/sass/all.scss' : 'stylesheets/sass/**/*.scss'
+		        	'dist/sass/all.scss' : 'stylesheets/sass/**/*.scss'
 		        }
 		    } 
 		},
@@ -46,7 +46,7 @@ module.exports = function(grunt){
 
 		autoprefixer: {
 			all: {
-				src: 'stylesheets/sass/all.min.scss'
+				src: 'dist/sass/all.min.scss'
 			}
 		},
 
@@ -61,9 +61,10 @@ module.exports = function(grunt){
 			},
 
 			js: {
-				files: ['scripts/**/*.js'],
+				files: ['js/**/*.js'],
 				tasks: ['jshint','concat']
-			}
+			},
+
 		}
 
 	});
@@ -71,6 +72,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -79,6 +81,7 @@ module.exports = function(grunt){
 		'jshint',
 		'concat',
 		'uglify',
+		'sass',
 		'csslint',
 		'cssmin',
 		'autoprefixer',

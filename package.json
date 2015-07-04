@@ -9,6 +9,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aditya-kappagantula/html_lab.git"
+  },
+  "keywords": [
+    "html5",
+    "sass",
+    "javascript",
+    "boilerplate",
+    "grunt",
+    "automation"
+  ],
   "author": "Aditya Kappagantula",
   "license": "BSD",
   "devDependencies": {
@@ -21,5 +33,9 @@
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/aditya-kappagantula/html_lab/issues"
+  },
+  "homepage": "https://github.com/aditya-kappagantula/html_lab"
 }
