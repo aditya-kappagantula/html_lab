@@ -1,5 +1,30 @@
-// Modules and Variables
+/*!
+Theme Name: Custom Application Theme
+Version: 1.0.0
+Description: html_lab project theme
+Author: Aditya Kappagantula
+Author URI: http://aditya.kappagantula.com
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
 
+
+
+
+// Import Bootstrap styles
+@import '../../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+// Core variables and mixins
+@import "../../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+
+// Overriding default Bootstrap variables
+@import "variables/_variables";
+
+@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
+
+@import "mixins/_mixins";
+
+@import "vendors/_vendors";
 
 // Partials
 @import "partials/reset";

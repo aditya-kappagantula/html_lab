@@ -1,5 +1,6 @@
 #HTML_LAB
 
+#TODO for NPM
 This repository aims to provide a customized html5boilerplate for quick project setup. To achieve a flawless setup a list of todo is present below:
 
 1. Install NodeJS
@@ -25,3 +26,11 @@ After the above todo are complete, the repository is all set to perform the belo
 4. To make changes to npm packages, open package.json and change version numbers as required.
 5. Delete the contents in node modules directory
 6. Run the command: 'npm install' from your project root directory. And, all required modules get installed!
+
+#TODO for Bower
+This repository aims to provide a customized html5boilerplate for quick project setup. To achieve a flawless setup a list of todo is present below:
+
+1. Install bower by running: sudo npm install -g bower
+2. Run the command '_bower init__' to create _bower.json in your project directory
+
+After the above todo are complete, the repository is all set to perform the below tasks:
