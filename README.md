@@ -21,3 +21,7 @@ After the above todo are complete, the repository is all set to perform the belo
 	8. Autoprefix on the main css file
 	9. Watch for changes on SASS and JS files and re-perform above tasks accordingly
 	10. Launch a server on port 8000 and launch the application on google chrome
+
+4. To make changes to npm packages, open package.json and change version numbers as required.
+5. Delete the contents in node modules directory
+6. Run the command: 'npm install' from your project root directory. And, all required modules get installed!
