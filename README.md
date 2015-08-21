@@ -6,7 +6,8 @@ This repository aims to provide a customized html5boilerplate for quick project 
 1. Install NodeJS
 2. Install NPM
 3. Install Grunt Command Line Interface
-4. Clone the repository to your local machine and remove git references
+4. Install Bower
+5. Clone the repository to your local machine and remove git references
 
 After the above todo are complete, the repository holds the below stated files and functionality at minimal level:
 
@@ -48,9 +49,11 @@ After the above todo are complete, the repository holds the below stated files a
 	6. Install Node JS
 	7. Install NPM [Node package manager]
 	8. Install Grunt Command Line Interface
+	9. Run the command: sudo npm install -g bower
 	9. Run the command: sudo npm install
-	10. Run the command: bower install
+	11. Run the command: bower install
+	12. Run the command: grunt
 
 ==========
-Thank you!
+Thank you! __
 Aditya Kappagantula.

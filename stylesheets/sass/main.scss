@@ -12,15 +12,15 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
 // Import Bootstrap styles
-@import '../../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 
 // Core variables and mixins
-@import "../../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
 
 // Overriding default Bootstrap variables
 @import "variables/_variables";
 
-@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 @import "mixins/_mixins";
 
