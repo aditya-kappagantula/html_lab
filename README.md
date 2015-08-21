@@ -1,6 +1,6 @@
 #HTML_LAB
 
-#TODO for NPM
+#Introduction
 This repository aims to provide a customized html5boilerplate for quick project setup. To achieve a flawless setup a list of todo is present below:
 
 1. Install NodeJS
