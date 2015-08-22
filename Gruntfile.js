@@ -34,7 +34,15 @@ module.exports = function(grunt){
 		},
 	
 		csslint: {
-			all:['stylesheets/css/all.css','dist/css/all.css']
+			strict: {
+				src: ['stylesheets/css/all.css','dist/css/all.css']
+			},
+			lax: {
+				options: {
+					csslintrc: '.csslintrc'
+				},
+				src: ['stylesheets/css/all.css','dist/css/all.css']
+			}
 		},
 
 		cssmin: {
@@ -52,23 +60,25 @@ module.exports = function(grunt){
 			}
 		},
 
-		open : {
-			dev : {
-				path: 'http://127.0.0.1:8000/',
+		connect: {
+			all: {
+				server: {
+					options: {
+						port: 8000,
+						base: '/Users/AK/DEV/html_lab'
+					},
+					hostname: '0.0.0.0',
+					keepalive: true,
+					livereload: true,
+				}
+			}
+		},
+
+		open: {
+			all: {
+				path: 'http://localhost:<%= connect.all.server.options.port%>',
 				app: 'Google Chrome'
-			},
-			// build : {
-			// 	path : 'http://google.com/',
-			// 	app: 'Google Chrome'
-			// },
-			// file : {
-			// 	path : '/etc/hosts'
-			// },
-			// custom: {
-			// 	path : function () {
-			// 		return grunt.option('path');
-			// 	} 
-			// }
+			}
 		},
 
 		watch: {
@@ -83,7 +93,11 @@ module.exports = function(grunt){
 
 			js: {
 				files: ['js/**/*.js'],
-				tasks: ['jshint','concat']
+				tasks: ['jshint','concat'],
+				options: {
+					spawn:false,
+					livereload:true
+				}
 			},
 
 		}
@@ -98,6 +112,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-open');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	grunt.registerTask('default',[
@@ -105,10 +120,11 @@ module.exports = function(grunt){
 		'concat',
 		'uglify',
 		'sass',
-		'csslint',
+		'csslint:lax',
 		'cssmin',
 		'autoprefixer',
 		'open',
+		'connect',
 		'watch'
 	]);
 
