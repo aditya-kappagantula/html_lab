@@ -67,7 +67,7 @@ module.exports = function(grunt){
 						port: 8000,
 						base: '/Users/AK/DEV/html_lab'
 					},
-					hostname: '0.0.0.0',
+					hostname: '127.0.0.1',
 					keepalive: true,
 					livereload: true,
 				}
@@ -83,7 +83,7 @@ module.exports = function(grunt){
 
 		watch: {
 			css: {
-				files: 'stylesheets/scss/**/*.scss',
+				files: 'stylesheets/sass/**/*.scss',
 				tasks: ['sass'],
 				options: {
 					spawn:false,
@@ -99,6 +99,14 @@ module.exports = function(grunt){
 					livereload:true
 				}
 			},
+
+			html: {
+	            files: ['index.html','**/*.html'],
+	            options: {
+	            	spawn: false,
+	                livereload: true
+	            }
+	        }
 
 		}
 
